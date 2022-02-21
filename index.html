@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.js">
+</head>
+
+<body>
+    <!-- tao bang tinh toan  -->
+    <div id="calculate">
+        <h1>Thuc hien phep tinh</h1>
+        <form>
+            <h3>So thu nhat</h3>
+            <input type="text" id="somot">
+            <br>
+            <h3>So thu hai</h3>
+            <input type="text" id="sohai">
+            <br>
+            <button type="button" onclick="tong()">+</button>
+            <button type="button" onclick="hieu()">-</button>
+            <button type="button" onclick="tich()">*</button>
+            <button type="button" onclick="thuong()">/</button>
+            <br>
+            <span id="result"></span>
+        </form>
+
+        <script>
+            function tong() {
+                // lay gia tri tu input
+                var a = document.getElementById("somot").value;
+                var b = document.getElementById("sohai").value;
+
+                // chuyen gia tri ve dang so
+                a = parseFloat(a);
+                b = parseFloat(b);
+                //tinh tong
+                var sum = a + b;
+
+                // hien thi gia tri
+                if (a == String && b == String) {
+                    document.querySelector('#result').innerHTML = "Nhap sai, nhap lai";
+                } else {
+                    document.querySelector('#result').innerHTML = "ket qua phep tinh nhan la: " + sum;
+                }
+            }
+
+            function hieu() {
+                // lay gia tri tu input
+                var a = document.getElementById("somot").value;
+                var b = document.getElementById("sohai").value;
+
+                // chuyen gia tri ve dang so
+                a = parseFloat(a);
+                b = parseFloat(b);
+                //tinh tong
+                var sum = a - b;
+
+                // hien thi gia tri
+                document.querySelector('#result').innerHTML = "ket qua phep tinh tru la: " + sum;
+            }
+
+            function tich() {
+                // lay gia tri tu input
+                var a = document.getElementById("somot").value;
+                var b = document.getElementById("sohai").value;
+
+                // chuyen gia tri ve dang so
+                a = parseFloat(a);
+                b = parseFloat(b);
+                //tinh tong
+                var sum = a * b;
+
+                // hien thi gia tri
+                document.querySelector('#result').innerHTML = "ket qua phep tinh nhan la: " + sum;
+            }
+
+            function thuong() {
+                // lay gia tri tu input
+                var a = document.getElementById("somot").value;
+                var b = document.getElementById("sohai").value;
+
+                // chuyen gia tri ve dang so
+                a = parseFloat(a);
+                b = parseFloat(b);
+                //tinh tong
+                var sum = a / b;
+
+                // hien thi gia tri
+                document.querySelector('#result').innerHTML = "ket qua phep tinh chia la: " + sum;
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
