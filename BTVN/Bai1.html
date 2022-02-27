@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Bai1.css">
+</head>
+
+<body>
+
+    <script>
+        // bai 1
+        var arr = [
+            10,
+            10,
+            3,
+            4,
+            5,
+            6
+        ];
+        console.log(arr);
+        // xuat mang
+        var temp = 0;
+        for (var i = 0; i < 6; i++) {
+            if (arr[i] > temp) {
+                temp = arr[i];
+            }
+        }
+        console.log("so lon nhat: " + temp);
+        // so lon nhat trong mang
+        temp = 0;
+        for (var i = 0; i < 6; i++) {
+            if (isNaN(arr[i]) == false) {
+                temp++;
+            }
+        }
+        console.log("so luong: " + temp);
+        // so luong phan tu trong mang
+        temp = 0;
+        for (var i = 0; i < 6; i++) {
+            temp += arr[i];
+        } //
+        console.log("tong cac gia tri trong mang: " + temp);
+        // tong cac phan tu trong mang
+    </script>
+
+</body>
+
+</html>

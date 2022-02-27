@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thang</title>
+</head>
+
+<body>
+    <div>
+        <form>
+            <input type="text" id="codeClass" placeholder="nhap ma lop">
+            <input type="text" id="className" placeholder="nhap ten lop">
+            <br>
+            <button onclick="add()">add</button>
+            <button onclick="del()">del</button>
+            <br>
+            <span id="result"></span>
+            <br>
+            <input type="text" id="codeSearch" placeholder="nhap ma lop">
+            <br>
+            <button onclick="search()">search</button>
+        </form>
+        <script>
+            // Bai 2
+            var arr = [];
+
+            function add() {
+                // var brr = {
+                //     codeClass: ' ',
+                //     className: ' '
+                // };
+                var brr = [];
+                let code = document.getElementById("codeClass").value;
+                // brr.codeClass = code;
+                brr.unshift(code);
+
+                let name = document.getElementById("className").value;
+                // brr.className = name;
+                brr.push(name);
+
+                arr.push(brr)
+                console.log(brr);
+                console.log(arr);
+                document.querySelector('#result').innerHTML = arr;
+            }
+
+            function search() {
+                let cSearch = document.getElementById("codeSearch").value;
+                for (let number of arr) {
+                    if (sSearch == arr[number].codeClass) {
+                        document.querySelector('#result').innerHTML = arr[number];
+                    }
+                }
+            }
+        </script>
+    </div>
+
+
+</body>
+
+</html>
