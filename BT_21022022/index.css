@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    align-items: center;
+    display: flex;
+}
+
+#calculate {
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+
+/* h3 {
+    display: inline-block;
+} */
+
+input {
+    height: 20px;
+    outline: none;
+    margin: 5px 0;
+}
+
+button {
+    width: 50px;
+    line-height: 20px;
+    outline: none;
+    margin: 5px 0;
+}
+
+h1 {
+    display: inline-block;
+    margin: 0 auto;
+}
